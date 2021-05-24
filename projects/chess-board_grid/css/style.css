@@ -1,0 +1,78 @@
+body {
+  top: 0;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/cool.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 30.38re;
+}
+
+.title {
+  color: red;
+  text-shadow: 3px 2px 4px white;
+}
+
+.board {
+  margin: 0;
+  padding: 0;
+  width: 420px;
+  height: 420px;
+  border: whitesmoke 8px double;
+  box-shadow: -20px 20px 20px #ddd;
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: repeat(8, 52.5px);
+  grid-template-rows: repeat(8, 52.5px);
+  background-image: url("../assets/boardbg.png");
+}
+.board #piece {
+  text-shadow: -8px 6px 4px;
+}
+.board #pieceb {
+  text-shadow: 8px 6px 4px lightslategrey;
+}
+
+.tiles {
+  border: black 1px solid;
+  font-size: 32px;
+  text-align: center;
+}
+
+.tiles:nth-child(n+1):nth-child(odd):nth-child(-n+8) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+9):nth-child(even):nth-child(-n+16) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+17):nth-child(odd):nth-child(-n+24) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+25):nth-child(even):nth-child(-n+32) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+33):nth-child(odd):nth-child(-n+40) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+41):nth-child(even):nth-child(-n+48) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+49):nth-child(odd):nth-child(-n+56) {
+  background-image: url(../assets/redtiles.png);
+}
+
+.tiles:nth-child(n+57):nth-child(even):nth-child(-n+64) {
+  background-image: url(../assets/redtiles.png);
+}
+
+/*# sourceMappingURL=style.css.map */

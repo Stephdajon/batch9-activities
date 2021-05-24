@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+
+  .title {
+    margin: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: red;
+    text-shadow: -8px 2px 4px black;
+  }
+}
+
+.board {
+  margin-left: auto;
+  margin-right: auto;
+  //   top: 50%;
+  //   left: 50%;
+  //   position: absolute;
+
+  margin-top: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 420px;
+  height: 420px;
+
+  background-color: whitesmoke;
+  border: 2px double black;
+
+  left: 8em;
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  //   transform: translate(-50%, -50%) rotate(-30deg) skew(25deg);
+
+  &:hover {
+    top: 45%;
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  // &:before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 256px;
+  //     right: 275px;
+  //     height: 20px;
+  //     width: 100%;
+  //     background: linear-gradient(90deg, grey 0%, grey 50%, #fff 50%, #fff 100%);
+  //     background-size: 120px;
+  //     transform: rotate(-90deg) skew(45deg);
+  // }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    // border: double 2px;
+
+    #puti {
+      text-shadow: -8px 6px 4px;
+    }
+
+    #itim {
+      text-shadow: 8px 6px 4px lightslategrey;
+    }
+  }
+
+  .white {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../assets/tileb.png);
+    background-color: whitesmoke;
+    border: black 1px solid;
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .black {
+    width: 3rem;
+    height: 3rem;
+    background-color: darkgray;
+
+    background-image: url(../assets/tiles.png);
+    border: black 1px solid;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
