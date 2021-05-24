@@ -1,0 +1,32 @@
+.productmodel {
+  width: auto;
+  height: 48vmax;
+  margin: 0;
+  padding: 1rem 2rem 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: url(../assets/homebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  #product-image {
+    width: 50vmax;
+    height: 40vmax;
+  }
+
+  .product-caption {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    #caption {
+      font-family: 'Abril Fatface', cursive;
+    }
+  }
+}
