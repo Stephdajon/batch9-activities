@@ -1,0 +1,88 @@
+#contact {
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.talk-to-us {
+  top: 40%;
+  width: auto;
+  height: 20vmax;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result-description {
+  font-size: 100px;
+  color: pink;
+}
+
+.result-caption {
+  color: pink;
+  font-size: large;
+}
+
+.icons {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facebook-icon {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.ig-icon {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: pink;
+}
+
+@media (max-width: 768px) {
+  .result-description {
+    font-size: 50px;
+    color: pink;
+  }
+  
+  .result-caption {
+    color: pink;
+    font-size: large;
+  }
+
+  .facebook-icon {
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .ig-icon {
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+}
+
