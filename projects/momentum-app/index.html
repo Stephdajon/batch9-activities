@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/e140b61450.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Lobster&family=Pattaya&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Pattaya&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+    <title>Momentum App</title>
+</head>
+<body>
+<div class="main">
+
+    <!-- time and date -->
+    <div id="timeDateContainer">
+        <div id="dateDisplay" class="dateContainer"></div>
+        <div id="clockDisplay" class="clockContainer"></div>
+    </div>
+    <!-- time and date end -->
+
+    <!-- User entry -->
+    <div class="userEntry">
+        <div id="label"><label>It's nice having you here!</label></div>
+        <span class="greet"></span>
+        <span class="name" contenteditable="true"></span>
+        <div id="input"><input type="input" placeholder="What's your name?" name='username' id="username" required autocomplete="off">
+        </div>
+        <button id="submit">Proceed</button>
+        
+    </div>
+    <!-- User Entry end -->
+
+    <!-- greetings -->
+    <div id="greetingDisplay"></div>
+    <!-- greetings end -->
+
+    <!-- main focus -->
+    <h3 id="focusHeader">Your main focus today is</h3>
+    <div id="mainFocus"></div>
+    <div id="inputFocus"><input type="text" class="inputFocus" placeholder="What's your main focus today?"></div>
+    <!-- main focus end -->
+
+    <!-- quotes -->
+    <div id="postQuote">
+        <h3>Quotes for today!</h3>
+        <div id="quote">"Success in life comes when you simply refuse to give up, with goals so strong that obstacles, failure and loss only act as motivation."    </div>
+        <div id="author">- Jim Rohn</div>
+        <button id="next"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+    
+    <div id="quotesDisplay" class="quotesContainer">
+        <div id="add_quote">
+            
+        <input type="text" id="myQuote" placeholder="Share your quotes here...">
+        <input type="text" id="myAuthor" placeholder="Write your author here...">
+        
+        </div>
+        <button class="submitQuote">Submit</button> 
+    </div>
+
+    <div class="quoteBtns">
+        <button id="addQuote"><i class="fas fa-scroll"></i></button>
+    </div>
+    <!-- quotes end -->
+    
+
+    <!-- todo -->
+    <div id="toDoContainer">
+        <div id="myDIV" class="header">
+            <h2>My To Do List</h2>
+            <input type="text" id="myInput" placeholder="What Do You Want to Do...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        
+        <ul id="myUL">
+             <!-- <li class="checked">Momentum App</li> -->
+        </ul>
+    </div> 
+   
+    <button type="submit" id="toDoBtn">TODO List</button>
+    <!-- todo end -->
+
+</div>
+    <script src="./script/timeDate.js"></script>
+    <script src="./script/quotes.js"></script>
+    <script src="./script/toDoList.js"></script>
+    <script src="./script/greetings.js"></script>
+    
+</body>
+</html>

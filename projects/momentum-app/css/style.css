@@ -1,0 +1,634 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+  grid-template-rows: repeat(8, 12.5%);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 360px) and (max-height: 640px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 0 2rem !important;
+  }
+
+  #dateDisplay {
+    font-size: 15px;
+    justify-self: center !important;
+    align-self: center !important;
+  }
+
+  .userEntry {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+  }
+  .userEntry #label {
+    margin-bottom: 0 !important;
+    font-size: 40px !important;
+    align-self: center !important;
+  }
+  .userEntry #input {
+    padding: 0;
+  }
+  .userEntry #input #username {
+    font-size: 30px !important;
+  }
+  .userEntry #input #username ::placeholder {
+    font-size: 2vw !important;
+  }
+
+  #inputFocus {
+    width: 100% !important;
+    outline-style: none !important;
+  }
+  #inputFocus ::placeholder {
+    width: 80% !important;
+  }
+
+  #focusHeader {
+    margin-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  #focusMain {
+    padding-left: 2rem;
+    align-self: center !important;
+  }
+
+  #postQuote {
+    height: 40vh !important;
+    margin: 0 !important;
+    margin-top: 1rem !important;
+    padding: 0.5rem !important;
+    grid-template-columns: 10px, 20px, 10px, 10px !important;
+  }
+  #postQuote h3 {
+    font-size: 15px;
+  }
+  #postQuote #quote {
+    font-size: 22px !important;
+  }
+  #postQuote #next {
+    font-size: 15px !important;
+  }
+
+  #add_quote {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  #add_quote #myQuote {
+    width: 100%;
+  }
+  #add_quote #myAuthor {
+    width: 100%;
+  }
+
+  #addQuote {
+    font-size: 20px !important;
+  }
+
+  #myDiv {
+    margin: 5px !important;
+  }
+
+  #toDoBtn {
+    margin: 0 !important;
+    width: 50%;
+    border-radius: 5px !important;
+  }
+}
+@media screen and (max-width: 540px) and (max-height: 823px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 0 2rem !important;
+  }
+
+  #dateDisplay {
+    font-size: 15px;
+    justify-self: center !important;
+    align-self: center !important;
+  }
+
+  .userEntry {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+  }
+  .userEntry #label {
+    margin-bottom: 0 !important;
+    font-size: 40px !important;
+    align-self: center !important;
+  }
+  .userEntry #input {
+    padding: 0;
+  }
+  .userEntry #input #username {
+    font-size: 30px !important;
+  }
+  .userEntry #input #username ::placeholder {
+    font-size: 2vw !important;
+  }
+
+  #inputFocus {
+    width: 100% !important;
+    outline-style: none !important;
+  }
+  #inputFocus ::placeholder {
+    width: 80% !important;
+  }
+
+  #focusHeader {
+    margin-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  #focusMain {
+    padding-left: 2rem;
+    align-self: center !important;
+  }
+
+  #postQuote {
+    height: 40vh !important;
+    margin: 0 !important;
+    margin-top: 1rem !important;
+    padding: 0.5rem !important;
+    grid-template-columns: 10px, 20px, 10px, 10px !important;
+  }
+  #postQuote h3 {
+    font-size: 20px;
+  }
+  #postQuote #quote {
+    font-size: 22px !important;
+  }
+  #postQuote #author {
+    font-size: 20px !important;
+  }
+  #postQuote #next {
+    font-size: 20px !important;
+  }
+
+  #add_quote {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  #add_quote #myQuote {
+    width: 100%;
+  }
+  #add_quote #myAuthor {
+    width: 100%;
+  }
+
+  #addQuote {
+    font-size: 20px !important;
+  }
+
+  #myDiv {
+    margin: 5px !important;
+  }
+
+  #toDoBtn {
+    margin: 0 !important;
+    margin-top: 1rem !important;
+    width: 50%;
+    border-radius: 5px !important;
+  }
+}
+#timeDateContainer {
+  margin: 0;
+  grid-column: 4/6;
+  grid-row: 1/3;
+  place-self: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateContainer {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.clockContainer {
+  margin-top: 10px;
+  font-size: 5rem;
+}
+
+.userEntry {
+  grid-column: 3/7;
+  grid-row: 3/6;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.userEntry #label {
+  font-size: 50px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+.userEntry .name {
+  justify-self: center;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+.userEntry .name:hover {
+  cursor: pointer;
+}
+.userEntry #input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  border-bottom: 2px solid #9b9b9b;
+}
+.userEntry #input #username {
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  outline-style: none;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+.userEntry #input ::placeholder {
+  font-size: 25px;
+  color: black;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+
+#submit {
+  margin-top: 20px;
+  width: 20%;
+  border-style: none;
+  outline-style: none;
+  background-color: transparent;
+  font-size: 1.75rem;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+#greetingDisplay {
+  display: flex;
+}
+
+.quotesContainer {
+  margin: 0;
+  padding: 0;
+  grid-column: 1/4;
+  grid-row: 6/8;
+  display: none;
+  grid-template-columns: 30px, 10px;
+}
+
+#add_quote {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#add_quote #myQuote {
+  border-radius: 5px;
+  border-bottom: solid 3px gray;
+}
+#add_quote #myAuthor {
+  border-radius: 5px;
+  border-bottom: solid 3px gray;
+  place-self: end;
+}
+
+ul {
+  border: 3px solid black;
+}
+
+#postQuote {
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 1rem;
+  grid-column: 1/3;
+  grid-row: 1/5;
+  display: none;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  grid-template-columns: 10px, 100px, 10px, 5px;
+}
+#postQuote #quote {
+  font-size: 1.5rem;
+  font-family: "Courgette", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+#postQuote #author {
+  font-family: "Courgette", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+  place-self: end;
+}
+#postQuote #next {
+  font-size: 1rem;
+  border-style: none;
+  outline-style: none;
+  background-color: transparent;
+  place-self: end;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+#postQuote #next:active {
+  box-shadow: 0 5 #666;
+  transform: translateY(4px);
+}
+
+.quoteBtns {
+  margin: 0.5rem;
+  grid-column: 1;
+  grid-row: 8;
+  justify-self: flex-start;
+  align-self: flex-end;
+  display: none;
+  cursor: pointer;
+}
+.quoteBtns #addQuote {
+  font-size: 2rem;
+  border-style: none;
+  outline-style: none;
+  background-color: transparent;
+}
+
+.quoteBtns:active {
+  transform: translateY(4px);
+}
+
+.submitQuote {
+  place-self: center;
+  width: 30%;
+  border-style: none;
+  outline-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+}
+
+.submitQuote:active {
+  box-shadow: 0 5 #666;
+  transform: translateY(4px);
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+#toDoContainer {
+  width: 100%;
+  display: none;
+  place-self: end;
+  grid-column: 7/9;
+  grid-row: 3/8;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: transparent;
+  padding: 5px 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+#toDoBtn {
+  margin: 30px 30px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Pattaya", sans-serif;
+  font-family: "Satisfy", cursive;
+  font-size: 15px;
+  grid-column: 8;
+  grid-row: 8;
+}
+
+#toDoBtn:active {
+  box-shadow: 0 5 #666;
+  transform: translateY(4px);
+}
+
+#mainFocus {
+  grid-column: 4/6;
+  grid-row: 5;
+  text-align: center;
+  width: fit-content;
+  justify-self: center;
+  align-self: end;
+}
+
+#focusHeader {
+  grid-column: 4/6;
+  grid-row: 5;
+  text-align: center;
+  width: fit-content;
+  justify-self: center;
+  align-self: start;
+  display: none;
+}
+
+#inputFocus {
+  grid-column: 4/6;
+  grid-row: 5;
+  place-self: center;
+  display: none;
+  width: 100%;
+  border-bottom: 2px solid gray;
+}
+#inputFocus .inputFocus {
+  border-style: none;
+  background-color: transparent;
+  outline-style: none;
+}
+#inputFocus ::placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+#focusMain {
+  text-align: center;
+  grid-column: 3/7;
+  grid-row: 6/9;
+  justify-self: center;
+  align-self: start;
+}
+
+/*# sourceMappingURL=style.css.map */

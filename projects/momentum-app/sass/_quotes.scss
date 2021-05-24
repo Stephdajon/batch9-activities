@@ -1,0 +1,134 @@
+//Add quote container
+.quotesContainer {
+    margin: 0;
+    padding: 0;
+
+    grid-column: 1 / 4;
+    grid-row: 6 / 8;
+
+    display: none;
+    grid-template-columns: 30px, 10px;
+    
+}
+// text box for quote and author
+#add_quote {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    #myQuote{
+        border-radius: 5px;
+        border-bottom: solid 3px gray;
+    }
+
+    #myAuthor{
+        border-radius: 5px;
+        border-bottom: solid 3px gray;
+        place-self: end;
+    }
+    
+}
+
+ul {
+    border: 3px solid black;
+}
+
+//posted quote (quote and author)
+#postQuote{
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 1rem;
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    display: none;
+    border-radius: 16px;
+
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    
+    grid-template-columns: 10px, 100px, 10px, 5px;
+    
+    #quote{
+        font-size: 1.5rem;
+        font-family: 'Courgette', cursive;
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Lobster', cursive;
+        font-family: 'Pattaya', sans-serif;
+        font-family: 'Satisfy', cursive;
+        
+    }
+
+    #author {
+        font-family: 'Courgette', cursive;
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Lobster', cursive;
+        font-family: 'Pattaya', sans-serif;
+        font-family: 'Satisfy', cursive;
+
+        place-self: end;
+    }
+
+    #next{
+        font-size: 1rem;
+        border-style: none;
+        outline-style: none;
+        background-color: transparent;
+        place-self: end;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    #next:active {
+        box-shadow: 0 5 #666;
+        transform: translateY(4px);
+    }
+}
+
+//add button and next button
+.quoteBtns{
+    margin: 0.5rem;
+    grid-column: 1;
+    grid-row: 8;
+    justify-self: flex-start;
+    align-self: flex-end;
+    display: none;
+    cursor: pointer;
+    
+
+    #addQuote{
+        font-size: 2rem;
+        border-style: none;
+        outline-style: none;
+        background-color: transparent;
+
+    }
+
+}
+.quoteBtns:active {
+    transform: translateY(4px);
+}
+
+// submit button for added quote
+.submitQuote{
+    place-self: center;
+    width: 30%;
+
+    border-style: none;
+    outline-style: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-size: 1.25rem;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Satisfy', cursive;
+}
+
+
+.submitQuote:active {
+    box-shadow: 0 5 #666;
+    transform: translateY(4px);
+}
