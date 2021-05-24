@@ -1,0 +1,150 @@
+#productsets {
+  margin: 0;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.product-sets {
+  margin: 0;
+  padding: 0;
+
+  width: 95vmax;
+  height: 60vmax;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+#description {
+  color: palevioletred;
+}
+
+.starterkit {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#starter-kit {
+  margin: 2rem;
+  padding: 0;
+
+  width: 22vmax;
+  height: 20vmax;
+  border-style: groove;
+  // cursor: pointer;
+
+  // &:hover {
+  //   background: pink;
+  //   box-shadow: 0 0 0 4px rgb(255, 153, 229), 0 0 0 4px #333;
+  // }
+
+  #starter-kit-image {
+    width: 22vmax;
+    height: 20vmax;
+  }
+
+  
+}
+
+.starter-kit_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: justify;
+  h2 {
+      display: none;
+    }
+}
+
+.clearbomb {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#clear-bomb {
+  margin: 2rem;
+  padding: 0;
+
+  width: 22vmax;
+  height: 20vmax;
+  border-style: groove;
+
+  #clear-bomb-image {
+    width: 22vmax;
+    height: 20vmax;
+  }
+}
+
+.clear-bomb_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  h2 {
+    display: none;
+  }
+}
+
+.poreless {
+  display: flex;
+}
+
+#poreless {
+  margin: 2rem;
+  padding: 0;
+
+  width: 22vmax;
+  height: 20vmax;
+  border-style: groove;
+
+  #poreless-image {
+    width: 22vmax;
+    height: 20vmax;
+  }
+}
+
+.poreless_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  h2 {
+    display: none;
+  }
+}
+
+.hydra-glow {
+  display: flex;
+  flex-direction: row;
+}
+
+#hydra-glow {
+  margin: 2rem;
+  padding: 0;
+
+  width: 22vmax;
+  height: 20vmax;
+  border-style: groove;
+
+  #hydra-glow-image {
+    width: 22vmax;
+    height: 20vmax;
+  }
+}
+.hydra-glow_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    display: none;
+  }
+}
