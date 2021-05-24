@@ -1,0 +1,69 @@
+body {
+  background-image: url(../assets/women.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo {
+    display: flex;
+    position: fixed;
+
+    width: auto;
+    height: 2vmax;
+}
+
+.contact {
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+.talk-to-us {
+  top: 40%;
+  width: auto;
+  height: 20vmax;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result-description {
+  font-size: 100px;
+  color: pink;
+}
+
+.result-caption {
+  color: pink;
+  font-size: large;
+}
+
+.icons {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facebook-icon {
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.ig-icon {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <script src="./source/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/e140b61450.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">          
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="header-img">
+            <div class="img">
+                <img src="./assets/ryxlogo.png" alt="Company Logo" id="logo">
+            </div>
+        </div>
+            <div id="nav-bar">
+                    <ul>
+                        <ls><a href="#nav-bar" class="nav-link">HOME</a></ls>
+                        <ls><a href="#productsets" class="nav-link">PRODUCTS</a></ls>
+                        <ls><a href="#contact" class="nav-link">CONTACTS</a></ls>
+                    </ul>
+                    
+                    <label for="show" class="user"><i class="far fa-user-circle"></i></label> 
+                   
+            </div>
+    </div>
+
+    <div class="center">
+        <input type="checkbox" id="show">
+        <div class="login-container">
+            <label for="show" class="close-btn"><i class="fas fa-times"></i></label>
+            <div class="login-form">Login Form</div>
+            <form action="./survey-result/survey-result.html">
+                <div class="login-data">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email here!" required>
+                </div>
+                <div class="login-data">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="forgotpassword"><a href="#">Forgot Password?</a></div>
+                <div class="btn">
+                    <div class="inner">
+                        <button type="submit" id="submit">Login</button>
+                    </div>
+                </div>
+                <div class="signup-link">Not a member? <a href="#">Sign-up now</a></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="productmodel">
+        <div class="product-img">
+            <img src="./assets/perfume.png" alt="Perfume" id="product-image">
+        </div>
+        <div class="product-caption">
+            <h1 id="caption">Empower women. Build confidence.</h1>
+            <h1 id="caption">Share opportunities.</h1>
+            <h1 id="caption">Create relationship.</h1>
+            <h1 id="caption">Change lives... for the better.</h1>
+        </div>
+    </div>
+
+    <div id="iframe-container">
+        <div id="iframes">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EiP6kyh11Sk?start=81" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="productsets">
+        <div class="product-sets">
+            <div class="starterkit">
+                <div id="starter-kit">
+                    <img src="./assets/beyouthiful.png" alt="Beyouthiful Starter Kit" id="starter-kit-image">
+                </div>
+                <div class="starter-kit_description">
+                    <h1 id="description">Ryxskin BeYOUTHiful Starter Kit</h1>
+                    <h3>Retail Price - Php.450</h3>
+                    <h2>Bundle of natural youth-enchancing skincare collection that will leave your skin looking visibly healthy and glowing.</h2>
+                    
+                </div>
+            </div>
+
+            <div class="clearbomb">
+                <div id="clear-bomb">
+                    <img src="./assets/clear-bomb.png" alt="Clear Bomb" id="clear-bomb-image">
+                </div>
+                <div class="clear-bomb_description">
+                    <h1 id="description">Ryxskin Clear Bomb</h1>
+                    <h3>Retail Price - Php.300</h3>
+                    <h2>An advanced exfoliating kit to deeply cleanse your skin from within, revealing a brighter, clearer and more glowing skin.</h2>
+                </div>
+            </div>
+
+            <div class="poreless">
+                <div id="poreless">
+                    <img src="./assets/poremain.png" alt="POreless Maintenance" id="poreless-image">
+                </div>
+                <div class="poreless_description">
+                    <h1 id="description">Ryxskin Poreless Maintenance Kit</h1>
+                    <h3>Retail Price - Php.350</h3>
+                    <h2>A set that works powerfully to give that bright, healthy complexion that's always glowing. </h2>
+                </div>
+                <!-- <div>When it comes to “EXFOLIATING”, It doesn’t always mean HARSH. Clear Bomb Advanced Exfoliating Kit remove dead skin cells. 
+                    Chemical Exfoliators (AHA/BHA): 
+                    • Glycolic Acid 
+                    • Salicylic Acid 
+                    Words like “chemical” and “acid” may sound scary when it comes to skin but rest assured - they’re safe when use PROPERLY and not OVER DOING it. From fighting fine lines, clearing acne and improving skin texture to achieve youthful, healthier and glowing skin. ✨</div> -->
+            </div>
+
+            <div class="hydra-glow">
+                <div id="hydra-glow">
+                    <img src="./assets/hydraglow.png" alt="Hydra Glow" id="hydra-glow-image">
+                </div>
+                <div class="hydra-glow_description">
+                    <h1 id="description">Ryxskin Hydra Glow Set</h1>
+                    <h3>Retail Price - Php.1040</h3>
+                    <h2>Heals discoloration caused by sun damage of inflammation. It helps to lighten imperfections like age spots & post-breakout acne scars.</h2> 
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="form">
+            <div class="best_set">
+                <button><label for="show-survey" class="best_set">Which skincare set is best for me?</label></button>
+            </div>
+    
+        </div>
+
+    </div>
+    
+
+    <div class="survey-form">
+        <input type="checkbox" id="show-survey">
+        <div class="survey-container">
+            <label for="show-survey" class="close-survey-btn"><i class="fas fa-times"></i></label>
+            <div class="ryx-survey-form">My Skin Type:</div>
+            <form action="./survey-result/survey-result.html">
+                <div class="survey-data">
+                    <label for="dryskin">DRY SKIN</label>
+                    <input type="radio" id="dryskin">
+                </div>
+                <div class="survey-data">
+                    <label for="sensitiveskin">SENSITIVE SKIN</label>
+                    <input type="radio" id="sensitiveskin" required>
+                </div>
+                <div class="survey-data">
+                    <label for="normalskin">NORMAL SKIN</label>
+                    <input type="radio" id="normalskin" required>
+                </div>
+                <div class="survey-data">
+                    <label for="oily_acneprone">OILY AND ACNE PRONE</label>
+                    <input type="radio" id="oily_acneprone" required>
+                </div>
+                <div class="survey-data">
+                    <label for="others">OTHERS</label>
+                    <input type="radio" id="others" required>
+                </div>
+                    <div class="survey-btn">
+                        <div class="inner-survey-btn"></div>
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        
+    <div id="contact">
+        <div class="talk-to-us">
+           <div class="result-description"> We'd love to talk to you</div>
+           <div class="result-caption">Join our fun community of ryx slayers or message us via our socials.</div>
+           <div class="icons">
+                <div class="facebook-icon">
+                     <a href="https://www.facebook.com/pretishopbeautyaidph"><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <div class="ig-icon">
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+           </div>
+        </div>
+
+        <div class="copyright">
+            <h3>Copyright © 2021 Ryxskin Sincerity</h3>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>
