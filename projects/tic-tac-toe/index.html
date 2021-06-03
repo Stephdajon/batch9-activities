@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Sigmar+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e140b61450.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section>
+        <div class="title">
+            <span class="g-title" id="tic">Tic</span>
+            <span class="g-title" id="tac">Tac</span>
+            <span class="g-title" id="toe">Toe</span>
+        </div>
+
+        <div class="g-start"><img src="./assets/start.gif" alt="tic-tac-toe">
+            <button id="start">START GAME</button></div>
+
+        <div class="choosePlayer">Pick your first move
+            <button id="xPlayer">Player-X</button>
+            <button id="oPlayer">Player-O</button>
+        </div>
+        <h2 class="g-status"></h2>
+        <div class="restart"><button class="g-restart"><i class="fas fa-sync-alt"></i></button></div>
+
+        <div class="g-container">
+            <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div>
+        </div>
+
+        <div class="nextPrevious">
+            <button id="next">NEXT</button>
+            <button id="previous">PREVIOUS</button>
+        </div>
+        
+    </section>
+<script src="./script/main.js"></script>
+</body>
+</html>

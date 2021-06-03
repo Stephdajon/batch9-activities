@@ -1,0 +1,199 @@
+body {
+    font-family: "Permanent Marker", cursive;
+    background: url(../assets/paper.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+section {
+    text-align: center;
+}
+
+.title{
+    margin: 0;
+    padding: 0;
+    padding-left: 12vmax;
+    display: block;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 65vmin;
+
+    #tic{
+        font-family: 'Sigmar One', cursive;
+        font-size: 10vmin;
+        color: #A7BEA9;
+    }
+
+    #tac{
+        font-family: 'Sigmar One', cursive;
+        font-size: 10vmin;
+        color: #E0CBC4;
+    }
+
+    #toe{
+        font-family: 'Sigmar One', cursive;
+        font-size: 10vmin;
+        color: #FFE6A9;
+    }
+
+}
+.g-title{
+    font-family: 'Sigmar One', cursive;
+    font-size: 8vmin;
+}
+
+.g-start{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 60vmin;
+    }
+    #start{
+        width: 50vmin;
+        height: 10vmin;
+        font-family: 'Finger Paint', cursive;
+        font-family: 'Sigmar One', cursive;
+        font-size: 5vmin;
+        background-color: black;
+        border-color: #E0CBC4;
+        border-radius: 1vmin;
+        color: whitesmoke;
+        cursor: pointer;
+        
+
+        &:active{
+            box-shadow: 0 5 #666;
+            transform: translateY(4px);
+        }
+    }
+}
+
+.choosePlayer{
+    display: none;
+    flex-direction: column;
+
+    font-family: 'Finger Paint', cursive;
+    font-size: 4vmin;
+    color: black;
+
+
+    button{
+        margin-bottom: 0.5px;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+
+        font-family: 'Finger Paint', cursive;
+        font-size: 3vmin;
+
+        color: grey;
+
+        &:hover{
+            box-shadow: 0 5 #666;
+            transform: translateY(4px);
+        }
+    }
+
+}
+
+.g-status{
+    margin: 0;
+    color: rgb(75, 66, 66);
+    font-size: 5vmin;
+    font-family: 'Finger Paint', cursive;
+    font-family: 'Sigmar One', cursive;
+    
+}
+
+.restart{
+    margin: 0;
+    padding-left: 25%;
+    display: flex;
+    justify-content: center;
+    
+
+    .g-restart{
+        display: none;
+        cursor: pointer;
+        
+        font-size: 4vmin;
+        border: none;
+        background: none;
+        outline: none;
+
+        color: rgb(37, 37, 37);
+
+        &:active{
+            box-shadow: 0 5 #666;
+            transform: translateY(4px);
+        }
+        
+    }
+
+}
+
+
+.g-container {
+    display: none;
+    grid-template-columns: repeat(3, auto);
+    width: 60vmin;
+    margin: 0 35% auto auto;
+    gap: 5px;
+
+    
+}
+.cell {
+    font-family: 'Finger Paint', cursive;
+    width: 20vmin;
+    height: 20vmin;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+    line-height: 20vmin;
+    font-size: 15vmin;
+    border-color: black;
+    color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13vmin;
+}
+
+
+
+.nextPrevious{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50vmin;
+    padding-right: 50vmin;
+    
+
+    button{
+        background-color: black;
+        border-color: #E0CBC4;
+        border-radius: 1vmin;
+        display: flex;
+        color: whitesmoke;
+        cursor: pointer;
+        
+
+        &:active{
+            box-shadow: 0 5 #666;
+            transform: translateY(4px);
+        }
+
+    }
+}
