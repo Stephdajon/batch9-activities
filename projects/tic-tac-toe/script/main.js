@@ -35,6 +35,7 @@ const winningConditions = [
 
 //game start
 start.addEventListener('click', () => {
+    gameState = ["", "", "", "", "", "", "", "", ""];
     choosePlayer.style.display = 'flex';
     gameStart.style.display = 'none';
 })
@@ -42,9 +43,10 @@ start.addEventListener('click', () => {
 //Choose your player
 
 oPlayer.addEventListener('click', () => {
+    gameActive = true;
     currentPlayer = "O";
-    gameActive = "true";
     choosePlayer.style.display = 'none';
+    gameStatus.style.display = 'block';
     
     statusDisplay.innerHTML = currentPlayerTurn();
     gameContainer.style.display = 'grid';
@@ -52,8 +54,8 @@ oPlayer.addEventListener('click', () => {
 })
 
 xPlayer.addEventListener('click', () => {
+    gameActive = true;
     currentPlayer = "X";
-    gameActive = "true";
     choosePlayer.style.display = 'none';
     gameStatus.style.display = 'block';
 
@@ -99,6 +101,7 @@ function resultValidation() {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
         nPbtn.style.display = 'flex';
+        next.style.visibility = 'hidden';
         return;
     }
 
@@ -107,6 +110,7 @@ function resultValidation() {
         statusDisplay.innerHTML = drawMessage();
         gameActive = false;
         nPbtn.style.display = 'flex';
+        next.style.visibility = 'hidden';
         return;
     }
     
@@ -139,16 +143,18 @@ function cellClick(clickedCellEvent) {
 
 //game restart
 function restartGame() {
+    gameActive = false;
     currentPlayer = "";
     gameState = ["", "", "", "", "", "", "", "", ""];
-    gameContainer.style.display = 'none';
-    gameStatus.style.display = 'none';
-    gameStart.style.display = 'flex';
-    gameRestart.style.display = 'none';
-    nPbtn.style.display = 'none';
-    statusDisplay.innerHTML = currentPlayerTurn();
     boardCell.forEach(cell => cell.innerHTML = "");
     boardCell.forEach(cell => cell.style.color = "black");
+    gameStart.style.display = 'flex';
+    gameContainer.style.display = 'none';
+    gameStatus.style.display = 'none';
+    gameRestart.style.display = 'none';
+    nPbtn.style.display = 'none';
+    nextHistory.length = 0;
+    previousHistory.length = 0;
 }
 
 boardCell.forEach(cell => cell.addEventListener('click', cellClick));
@@ -159,13 +165,13 @@ gameRestart.addEventListener('click', restartGame);
 
 //next button
 next.addEventListener('click', () => {
-    previous.style.visibility = 'visible';
-    if(previousHistory.length === 0){
+    gameActive = false;
+    if(previousHistory.length === 1){
         next.style.visibility = 'hidden';
         previous.style.visibility = 'visible';
     } 
 
-    if(previousHistory.length !=0){
+    if(previousHistory.length != 0){
         previous.style.visibility = 'visible';
         let nextMove = previousHistory[previousHistory.length - 1];
         let nextCell = nextMove.cell;
@@ -178,7 +184,7 @@ next.addEventListener('click', () => {
 
 //previous button
 previous.addEventListener('click', () => {
-    next.style.visibility = 'visible';
+    gameActive = false;
     if(nextHistory.length === 1){
         previous.style.visibility = 'hidden';
         next.style.visibility = 'visible';
